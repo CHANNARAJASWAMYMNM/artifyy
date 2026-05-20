@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FDFBF7; /* Soft sand linen background */
+  --foreground: #2A2A2A; /* Deep charcoal */
+  --primary: #C86B45;    /* Earthy Terracotta */
+  --primary-light: #DCA07B; /* Warm Clay */
+  --sage: #6E8C75;       /* Forest Sage */
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-sage: var(--sage);
+  --color-linen: #FDFBF7;
+  --color-charcoal: #2A2A2A;
+  
+  --font-sans: 'Outfit', var(--font-geist-sans), sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+/* Custom styles for artisan theme */
+.artisan-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.artisan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -8px rgba(200, 107, 69, 0.15);
+}
+
+.clay-button {
+  background-color: var(--primary);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.clay-button:hover {
+  background-color: #B55A35;
+  transform: scale(1.02);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFEB;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCA07B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C86B45;
+}
